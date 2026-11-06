@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://climhub.com.br/sitemap.xml
