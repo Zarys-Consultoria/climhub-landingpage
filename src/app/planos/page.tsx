@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Fragment } from "react";
 import { Check, Minus } from "lucide-react";
 import {
@@ -396,12 +397,12 @@ export default function PlansPage() {
             <ActionButton href={WHATSAPP_URL}>
               Falar com um especialista
             </ActionButton>
-            <a
+            <Link
               href="/solucoes"
               className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3.5 text-sm font-bold transition hover:bg-white/10"
             >
               Conhecer as soluções
-            </a>
+            </Link>
           </div>
         </Reveal>
       </section>

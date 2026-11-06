@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, type MouseEvent } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import headerLogo from "@/assets/brand/logo2-climhub.png";
@@ -45,16 +46,26 @@ export function HomeHeader() {
           className="hidden items-center gap-8 md:flex"
           aria-label="Principal"
         >
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={item.href.startsWith("#") ? smoothScroll : undefined}
-              className="text-sm font-semibold text-ink/70 transition hover:text-brand"
-            >
-              {item.label}
-            </a>
-          ))}
+          {nav.map((item) =>
+            item.href.startsWith("#") ? (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={smoothScroll}
+                className="text-sm font-semibold text-ink/70 transition hover:text-brand"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-semibold text-ink/70 transition hover:text-brand"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
         </nav>
         <div className="hidden md:block">
           <a
@@ -79,16 +90,27 @@ export function HomeHeader() {
       </div>
       {menuOpen && (
         <nav className="animate-menu-open border-t border-line bg-white px-4 pb-5 pt-3 md:hidden">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={handleNavClick}
-              className="block rounded-lg px-3 py-3 text-[15px] font-semibold text-ink transition-colors active:bg-ice"
-            >
-              {item.label}
-            </a>
-          ))}
+          {nav.map((item) =>
+            item.href.startsWith("#") ? (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={handleNavClick}
+                className="block rounded-lg px-3 py-3 text-[15px] font-semibold text-ink transition-colors active:bg-ice"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="block rounded-lg px-3 py-3 text-[15px] font-semibold text-ink transition-colors active:bg-ice"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
           <a
             href={WHATSAPP_URL}
             target="_blank"

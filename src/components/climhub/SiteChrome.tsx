@@ -33,10 +33,10 @@ export function SiteHeader() {
           {links.map((link) => {
             const active = pathname === link.href || (link.href === "/#campo" && pathname === "/");
             return (
-              <a key={link.href} href={link.href} className={`nav-link relative py-2 text-sm font-semibold transition ${active ? "text-ink" : "text-ink/70 hover:text-brand"}`}>
+              <Link key={link.href} href={link.href} className={`nav-link relative py-2 text-sm font-semibold transition ${active ? "text-ink" : "text-ink/70 hover:text-brand"}`}>
                 {link.label}
                 <span className={`nav-underline absolute -bottom-1 left-0 right-0 h-[3px] rounded-full ${active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -56,9 +56,9 @@ export function SiteHeader() {
       {open && (
         <nav className="animate-menu-open border-t border-line bg-white px-4 pb-5 pt-3 md:hidden">
           {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)} className="block rounded-lg px-3 py-3 text-[15px] font-semibold text-ink transition-colors active:bg-ice">
+            <Link key={link.href} href={link.href} onClick={() => setOpen(false)} className="block rounded-lg px-3 py-3 text-[15px] font-semibold text-ink transition-colors active:bg-ice">
               {link.label}
-            </a>
+            </Link>
           ))}
           <div className="mt-3">
             <ActionButton href="/solucoes">Conhecer o Climhub</ActionButton>
