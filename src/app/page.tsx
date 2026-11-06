@@ -538,7 +538,7 @@ export default function Home() {
             contratos, equipamentos e manutenções em um único lugar.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3 md:mt-9">
-            <PrimaryButton href="#planos">Conhecer os planos</PrimaryButton>
+            <PrimaryButton href="/planos">Conhecer os planos</PrimaryButton>
             <a
               href={WHATSAPP_URL}
               target="_blank"

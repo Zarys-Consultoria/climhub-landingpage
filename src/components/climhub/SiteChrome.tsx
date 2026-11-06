@@ -9,6 +9,8 @@ import logo from "@/assets/brand/logo-climhub.png";
 import headerLogo from "@/assets/brand/logo2-climhub.png";
 
 export const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5585987734863&text&type=phone_number&app_absent=0";
+export const INSTAGRAM_URL = "https://www.instagram.com/zarys.consultoria/";
+export const LINKEDIN_URL = "https://www.linkedin.com/company/zarys-consultoria/";
 
 export function ActionButton({ children, href = "/", light = false }: { children: ReactNode; href?: string; light?: boolean }) {
   const className = `inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition hover:-translate-y-0.5 ${light ? "bg-white text-brand hover:bg-ice" : "bg-brand text-white hover:bg-brand-dark"}`;
@@ -78,13 +80,18 @@ export function SiteFooter() {
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/45 md:mt-5">
             Sua operação de climatização, mais simples. Gerencie tudo em uma única plataforma.
           </p>
-          <div className="mt-5 flex items-center gap-5 md:mt-6">
-            <a href="#" aria-label="Instagram" className="text-white/60 transition-all duration-200 hover:scale-110 hover:text-brand">
-              <InstagramIcon />
-            </a>
-            <a href="#" aria-label="LinkedIn" className="text-white/60 transition-all duration-200 hover:scale-110 hover:text-brand">
-              <LinkedInIcon />
-            </a>
+          <div className="mt-5 md:mt-6">
+            <span className="text-[11px] font-semibold uppercase tracking-[.14em] text-white/40">
+              Acompanhe a Zarys
+            </span>
+            <div className="mt-3 flex items-center gap-5">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Zarys" className="text-white/60 transition-all duration-200 hover:scale-110 hover:text-brand">
+                <InstagramIcon />
+              </a>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Zarys" className="text-white/60 transition-all duration-200 hover:scale-110 hover:text-brand">
+                <LinkedInIcon />
+              </a>
+            </div>
           </div>
         </div>
         <nav aria-label="Navegação do rodapé">
