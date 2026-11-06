@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Climhub",
   },
   description:
-    "Gerencie clientes, contratos, equipamentos, PMOCs e manutenções em uma única plataforma — do escritório à equipe em campo.",
+    "Gerencie clientes, contratos, equipamentos, PMOCs e manutenções em uma única plataforma, do escritório à equipe em campo.",
   applicationName: "Climhub",
   keywords: [
     "climatização",

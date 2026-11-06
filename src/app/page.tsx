@@ -205,15 +205,16 @@ export default function Home() {
       >
         <div className="absolute -right-32 top-10 h-[500px] w-[500px] rounded-full bg-brand/[.06] blur-[80px]" />
         <div className="absolute -bottom-16 -left-20 h-[350px] w-[350px] rounded-full bg-brand/[.04] blur-[60px]" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.1fr_.9fr] lg:gap-14">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.25fr_.75fr] lg:gap-14">
           <Reveal>
-            <h1 className="max-w-[580px] font-display text-[2.2rem] font-extrabold leading-[1.08] tracking-tight text-ink md:text-[clamp(2.5rem,5vw,3.5rem)] md:leading-[1.06]">
-              Sua operação de climatização,{" "}
-              <span className="text-brand">mais simples.</span>
+            <h1 className="max-w-[720px] font-display text-[clamp(1.25rem,5.2vw,1.6rem)] font-extrabold leading-[1.12] tracking-tight text-ink md:text-[clamp(2.4rem,4vw,2.9rem)] md:leading-[1.08]">
+              Sua operação de
+              <br />
+              climatização, <span className="text-brand">mais simples.</span>
             </h1>
             <p className="mt-5 max-w-[500px] text-base leading-relaxed text-muted md:mt-6 md:text-[19px]">
               Gerencie clientes, contratos, equipamentos, PMOCs e manutenções em
-              uma única plataforma — do escritório à equipe em campo.
+              uma única plataforma, do escritório à equipe em campo.
             </p>
             <div className="mt-7 flex flex-wrap gap-3 md:mt-9">
               <PrimaryButton href="#solucoes">Conhecer o Climhub</PrimaryButton>
